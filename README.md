@@ -1,2 +1,4 @@
-my very own hack client! (adding gui and more modules soon)
-the name is liquor client though its lacking in some areas (every corner atp)
+ADDED GUIIIIIIIIIII
+added killaura and scaffold and aimassist (this took more time then my summer break sadly)
+donate via onlyfans.com/SSKID3X
+(joke lol)
