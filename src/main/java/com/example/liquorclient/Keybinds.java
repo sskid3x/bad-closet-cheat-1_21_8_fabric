@@ -17,39 +17,30 @@ public class Keybinds {
     private static KeyBinding aimbotKey;
 
     public static void register() {
-        // GUI menu (Right Shift)
         openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Open hax",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_RIGHT_SHIFT,
                 "Liquor Client"
         ));
-
-        // Kill Aura (R)
         autoAttackKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Kill Aura",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_R,
                 "Liquor Client"
         ));
-
-        // Scaffold (C)
         scaffoldKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Scaffold",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_C,
                 "Liquor Client"
         ));
-
-        // Aimbot (X)
         aimbotKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Aimbot",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_Z,
                 "Liquor Client"
         ));
-
-        // Event loop
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openMenuKey.wasPressed()) client.setScreen(new ModMenuScreen());
             while (autoAttackKey.wasPressed()) AutoAttackMod.toggle();
@@ -58,3 +49,4 @@ public class Keybinds {
         });
     }
 }
+
